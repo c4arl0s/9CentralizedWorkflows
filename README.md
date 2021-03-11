@@ -1,24 +1,22 @@
-# 9CentralizedWorkflowsRysGitTutorial
+# [go back to Content](https://github.com/c4arl0s/RysGitTutorial#rys-git-tutorial)
 
-9 Centralized Workflows Rys Git Tutorial
-
-# 9. [Centralized Workflows](https://github.com/c4arl0s/RysGitTutorial#9-centralized-workflows-1)
- * [Create a Bare Repository (Central)](https://github.com/c4arl0s/RysGitTutorial#-create-a-bare-repository-central)
- * [Update Remotes (Mary and You)](https://github.com/c4arl0s/RysGitTutorial#-update-remotes-mary-and-you)
- * [Push the Master Branch](https://github.com/c4arl0s/RysGitTutorial#-push-the-master-branch)
- * [Add News Update (You)](https://github.com/c4arl0s/RysGitTutorial#-add-news-update-you)
- * [Publish the News Item (You)](https://github.com/c4arl0s/RysGitTutorial#-publish-the-news-item-you)
- * [Update CSS Styles (Mary)](https://github.com/c4arl0s/RysGitTutorial#-update-css-styles-mary)
- * [Update another CSS Style](https://github.com/c4arl0s/RysGitTutorial#-update-another-css-style)
- * [Clean up Before Publishing (Mary](https://github.com/c4arl0s/RysGitTutorial#-clean-up-before-publishing-mary)
- * [Publish CSS Changes (Mary](https://github.com/c4arl0s/RysGitTutorial#-publish-css-changes-mary)
- * [Pull in Changes (Mary)](https://github.com/c4arl0s/RysGitTutorial#-pull-in-changes-mary)
- * [Pull in Changes (you)](https://github.com/c4arl0s/RysGitTutorial#-pull-in-changes-you)
- * [Conclusion](https://github.com/c4arl0s/RysGitTutorial#-conclusion-7)
- * [Quick Reference](https://github.com/c4arl0s/RysGitTutorial#-quick-reference-5)
+# [9 Centralized Workflows RysGit Tutorial - Content](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#go-back-to-content)
+ * [Create a Bare Repository (Central)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-create-a-bare-repository-central)
+ * [Update Remotes (Mary and You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-update-remotes-mary-and-you)
+ * [Push the Master Branch](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-push-the-master-branch)
+ * [Add News Update (You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-add-news-update-you)
+ * [Publish the News Item (You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-publish-the-news-item-you)
+ * [Update CSS Styles (Mary)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-update-css-styles-mary)
+ * [Update another CSS Style](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-update-another-css-style)
+ * [Clean up Before Publishing (Mary](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-clean-up-before-publishing-mary)
+ * [Publish CSS Changes (Mary](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-publish-css-changes-mary)
+ * [Pull in Changes (Mary)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-pull-in-changes-mary)
+ * [Pull in Changes (you)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-pull-in-changes-you)
+ * [Conclusion](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-conclusion)
+ * [Quick Reference](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-quick-reference)
 
 
-# 9. [Centralized Workflows](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# [9 Centralized Workflows RysGit Tutorial](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 In the previous module, we shared information directly between two developers repositories: my git repository and mary's repository. This works for very small teams developing simple programs, but larger projects call for a more structured environment. This module Introduces one such environment the **centralized workflow**.
 
@@ -30,7 +28,7 @@ Typically, you would store the central repository on a server to allow internet-
 
 If you have access to server, feel free to use it to host the central repository that we are about to create. You will have to provide SSH paths to your server repository in place of the paths provided below, but other than that, you can follow this module's instructions as you find them. For everyone else, our network-based Git experience will begin in the next module.
 
-# 	* [Create a Bare Repository (Central)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Create a Bare Repository (Central)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 First, let's create our central **"Communication Hub"**. Again, make sure to change /path/to/my-git-repo to the actual path to your repository. If you have decided to host the central repository on your server, you should SSH into it an run the **git init** command wherever you would like to store the repository.
 
@@ -53,7 +51,7 @@ As in the very first module, **git init** creates a new repository. But this tim
 
 If you examine the contest of the resulting central-repo.git folder, you will notice that it contains the exact same files as the .git folder in our my-git-repo project. Git has **literally** gotten rid of our working directory. The conventional .git extension in the directory name is a way to convey this property.
 
-# 	* [Update Remotes (Mary and You)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Update Remotes (Mary and You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 We have successfully set up a central repository that can be used to share updates between us, Mary, and any other developers. Next, we should add it as a remote to both mary's repository and my git repository.
 
@@ -82,7 +80,7 @@ Note that we deleted the remote connections between Mary and our git repository 
 
 If you decided to host the central repository on a **server**, you will need to change the **../centra-repo.git** path to: **ssh://user@example.com/to/central-repo.git** substituting your **SSH username** and **Server location** for **user@example.com** and the central repository's location for **path/to/central-repo.git**
 
-# 	* [Push the Master Branch](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Push the Master Branch](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 We didn't **clone** the central repository -We just initialized it as a **bare repository**. This means it does not have any of our project history yet. We can fix that using the **git push** command introduced the last module.
 
@@ -264,7 +262,7 @@ This should output the familiar history listing of the **master branch**
 
 Recall that **git push** creates **local** branches in the destination repository. We said it was dangerous to push to a friend's repository, as they probably wouln't appreciate new branches appearing at random. However, it is safe to create local branches in **central-repo.git** because it has no working directory, which means it's impossible to disturb anyone's development.
 
-# 	* [Add News Update (You)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Add News Update (You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 Let's see our new centralized collaboration workflow in action by commiting a few more snapshots.
 
@@ -376,7 +374,7 @@ $ git commit -m "Add 3rd news item"
  create mode 100644 news-3.html
 ```
 
-# 	* [Publish the News Item (You)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Publish the News Item (You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 Previously **"publishing"** mean merging with the local master branch. But since we are **only** interacting with the central repository, our **master** branch is private again. There is no chance of Mary pulling content directly from our repository.
 
@@ -423,7 +421,7 @@ After merging into **master** as we normally would, **git push** updates the cen
 
 Note that this accomplishes the exact same thing as going into the central repository and doing a **fetch/fast-forward** merge, except **git push** allows us to do everything from inside my git repository. We will see some other convenient features of this command later in the module.
 
-# 	* [Update CSS Styles (Mary)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Update CSS Styles (Mary)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 Next, let's pretend to be Mary again and add some CSS formatting (she is our graphic designer, after all)
 
@@ -463,7 +461,7 @@ $ git commit -a -m "Add CSS styles for headings and links"
  1 file changed, 12 insertions(+)
 ```
 
-# 	* [Update another CSS Style](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Update another CSS Style](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 Opps, Mary forgot to add some formatting. Append the h3 styling to **style.css**:
 
@@ -483,7 +481,7 @@ $ git commit -a -m "Add CSS styles for 3rd level headings"
  1 file changed, 1 insertion(+)
 ```
 
-# 	* [Clean up Before Publishing (Mary](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Clean up Before Publishing (Mary](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 Before Mary considers pushing her updates to the central repository, she needs to make sure she has a clean history. This **must** be done by Mary, because it is near-impossible to change history after it has been made public.
 
@@ -513,10 +511,10 @@ So, to publish her rebased master branch to the central repository, Mary would h
 
 This brings us to **the most important rule to remember** while rebasing: **Nerver, ever rebase commits that have been pushed to a shared repository**
 
-If you need to change a public commit, use the **git revert** command that we discussed in [Undoing Changes](). This creates a new commit with the required modifications instead of re-writing old snapshots.
+If you need to change a public commit, use the **git revert** command that we discussed in [Undoing Changes](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content). This creates a new commit with the required modifications instead of re-writing old snapshots.
 
 
-# 	* [Publish CSS Changes (Mary](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Publish CSS Changes (Mary](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 Now that her history is cleaned up, Mary can publish the changes.
 
@@ -535,7 +533,7 @@ Fast-forward
  1 file changed, 13 insertions(+)
 ```
 
-then:
+Then:
 
 ```console
 Tue Jun 16 ~/iOS/RysGitTutorialMarysRepository 
@@ -566,7 +564,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 This will output a verbose rejection message. It seems that Git won't let anyone push to a remote server if it doesn't result in a **fast-forward** merge. This prevents us from losing the **"Add 3rd news"** item commit that would need to be overwritten for **origin/master** to match **mary/master**.
 
-# 	* [Pull in Changes (Mary)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Pull in Changes (Mary)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 Mary can solve this problem by pulling in the central changes before trying to push her CSS changes. First, she needs the most up-to-date version of the **origin/master** branch.
 
@@ -628,7 +626,7 @@ After the rebase, Mary's master branch contains everything from the central repo
 
 ![Screen Shot 2020-06-16 at 10 30 09](https://user-images.githubusercontent.com/24994818/84794851-60256f80-afbc-11ea-9e21-d746eb4a81c9.png)
 
-# 	* [Pull in Changes (you)](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Pull in Changes (you)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 Finally, we will switch back to our repository and pull in Mary's CSS formatting.
 
@@ -663,7 +661,7 @@ Our repository is now synchronized with the central repository. Note that Mary m
 
 The presence of a central communication hub condenses all this development into a single repository and ensures that no one overwrites another's content, as we discovered while trying to push Mary's CSS updates.
 
-# 	* [Conclusion](https://github.com/c4arl0s/RysGitTutorial#rysgittutorial)
+# 	* [Conclusion](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 In this module, we introduced another remote repository to serve as the **central storage** facility for our project. We also discovered **bare repositories**, which are just like ordinary repositories -**minus the working directory**. Bare repositories provide **"safe"** location to push branches to, as long as you remember not to rebase the commits that it already contains.
 
@@ -671,7 +669,7 @@ We hosted the central repository on our local filesystem, right next to both our
 
 Next up, we will configure a network-based repository using a service called GitHub. In addition to introducing network access for Git repositories, this will open the door for another collaboration standard: the integrator workflow.
 
-#   * [Quick Reference](https://github.com/c4arl0s/RysGitTutorial#9-centralized-workflows)
+#   * [Quick Reference](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 ```console
 $ git init --bare repositoryName
