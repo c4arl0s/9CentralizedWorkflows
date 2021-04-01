@@ -18,19 +18,19 @@
 
 # [9 Centralized Workflows RysGit Tutorial](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
-In the previous module, we shared information directly between two developers repositories: my git repository and mary's repository. This works for very small teams developing simple programs, but larger projects call for a more structured environment. This module Introduces one such environment the centralized workflow.
+In the previous module, we shared information directly between two developers repositories: my git repository and mary's repository. This works for very small teams developing simple programs, but larger projects call for a more structured environment. **This module Introduces one such environment the centralized workflow**.
 
-We will use a third Git Repository to act as a central communication hub between us and Mary. Instead of pulling changes into my git repository from mary's repository and vice versa, we will push to an fetch from a dedicated storage repository. After this module, our workflow will look like the following.
+We will use a third Git Repository to act as a central communication hub between us and Mary. **Instead of pulling changes into my git repository from mary's repository and vice versa, we will push to an fetch from a dedicated storage repository**. After this module, our workflow will look like the following.
 
 ![Screen Shot 2020-06-11 at 11 16 40](https://user-images.githubusercontent.com/24994818/84412570-106a3100-abd5-11ea-8858-0e6e6d43749b.png)
 
-Typically, you would store the central repository on a server to allow internet-based collaboration. Unfortunately, server configuration can vary among hosting providers, making it hard to write universal step-by-step instructions. So, we will continue exploring remote repositories using our local filesystems, just like in the previous module.
+Typically, you would store the central repository on a server to allow internet-based collaboration. Unfortunately, server configuration can vary among hosting providers, making it hard to write universal step-by-step instructions. **So, we will continue exploring remote repositories using our local filesystems, just like in the previous module**.
 
-If you have access to server, feel free to use it to host the central repository that we are about to create. You will have to provide SSH paths to your server repository in place of the paths provided below, but other than that, you can follow this module's instructions as you find them. For everyone else, our network-based Git experience will begin in the next module.
+**If you have access to server, feel free to use it to host the central repository that we are about to create**. You will have to provide SSH paths to your server repository in place of the paths provided below, but other than that, you can follow this module's instructions as you find them. **For everyone else, our network-based Git experience will begin in the next module**.
 
 # 	* [Create a Bare Repository (Central)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
-First, let's create our central "Communication Hub". Again, make sure to change /path/to/my-git-repo to the actual path to your repository. If you have decided to host the central repository on your server, you should SSH into it an run the git init command wherever you would like to store the repository.
+**First, let's create our central "Communication Hub**". Again, make sure to change /path/to/my-git-repo to the actual path to your repository. If you have decided to host the central repository on your server, you should SSH into it an run the git init command wherever you would like to store the repository.
 
 The instructions leads you to the container directory of your git repository
 
@@ -47,13 +47,13 @@ $ git init --bare central-repo.git
 Initialized empty Git repository in /Users/carlossantiagocruz/Documents/SWIFT-PROGRAMMING/central-repo.git/
 ```
 
-As in the very first module, git init creates a new repository. But this time, we used the bare flag to tell Git that we don't want a working directory. This will prevent us from developing in the central repository, which eliminates the possibility of messing up another user's environment with git push. A central repository is only supposed to act as a storage facility - not a development environment.
+As in the very first module, git init creates a new repository. **But this time, we used the bare flag to tell Git that we don't want a working directory**. This will prevent us from developing in the central repository, which eliminates the possibility of messing up another user's environment with git push. **A central repository is only supposed to act as a storage facility - not a development environment**.
 
 If you examine the contest of the resulting central-repo.git folder, you will notice that it contains the exact same files as the .git folder in our my-git-repo project. Git has literally gotten rid of our working directory. The conventional .git extension in the directory name is a way to convey this property.
 
 # 	* [Update Remotes (Mary and You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
-We have successfully set up a central repository that can be used to share updates between us, Mary, and any other developers. Next, we should add it as a remote to both mary's repository and my git repository.
+**We have successfully set up a central repository that can be used to share updates between us, Mary, and any other developers**. Next, we should add it as a remote to both mary's repository and my git repository.
 
 ```console
 Fri Jun 12 ~/iOS 
@@ -76,13 +76,13 @@ Fri Jun 12 ~/iOS/RysGitTutorialRepository
 $ git remote rm mary
 ```
 
-Note that we deleted the remote connections between Mary and our git repository with git remote rm. For the rest of this module we will only use the central repository to share updates.
+Note that we deleted the remote connections between Mary and our git repository with git remote rm. **For the rest of this module we will only use the central repository to share updates**.
 
-If you decided to host the central repository on a server, you will need to change the ../centra-repo.git path to: ssh://user@example.com/to/central-repo.git substituting your SSH username and Server location for user@example.com and the central repository's location for path/to/central-repo.git.
+**If you decided to host the central repository on a server, you will need to change the ../centra-repo.git path to: ssh://user@example.com/to/central-repo.git substituting your SSH username and Server location for user@example.com and the central repository's location for path/to/central-repo.git**.
 
 # 	* [Push the Master Branch](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
-We didn't clone the central repository -We just initialized it as a bare repository. This means it does not have any of our project history yet. We can fix that using the git push command introduced the last module.
+**We didn't clone the central repository -We just initialized it as a bare repository**. This means it does not have any of our project history yet. **We can fix that using the git push command introduced the last module**.
 
 ```console
 Sat Jun 13 ~/iOS/RysGitTutorialRepository 
@@ -97,11 +97,12 @@ To ../central-repo.git/
  * [new branch]      master -> master
 ```
 
-Our central repository now contains our entire master branch which can double-check with the following.
+**Our central repository now contains our entire master branch which can double-check with the following**.
 
 ```console
 Sat Jun 13 ~/iOS/central-repo.git 
 $ cd ../central-repo.git/
+$ git log
 ```
 
 ```console
@@ -258,9 +259,9 @@ Date:   Fri May 22 12:54:21 2020 -0500
     Create index page for the message
 ```
 
-This should output the familiar history listing of the master branch.
+**This should output the familiar history listing of the master branch**.
 
-Recall that git push creates local branches in the destination repository. We said it was dangerous to push to a friend's repository, as they probably wouln't appreciate new branches appearing at random. However, it is safe to create local branches in central-repo.git because it has no working directory, which means it's impossible to disturb anyone's development.
+Recall that git push creates local branches in the destination repository. We said it was dangerous to push to a friend's repository, as they probably wouln't appreciate new branches appearing at random. **However, it is safe to create local branches in central-repo.git because it has no working directory, which means it's impossible to disturb anyone's development**.
 
 # 	* [Add News Update (You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
@@ -415,11 +416,11 @@ To ../central-repo.git/
    49baa6e..450182a  master -> master
 ```
 
-After merging into master as we normally would, git push updates the central repository's master branch to reflect our local master. From our perspective, the push can be visualized as the following:
+**After merging into master as we normally would, git push updates the central repository's master branch to reflect our local master**. From our perspective, the push can be visualized as the following:
 
 ![Screen Shot 2020-06-15 at 10 57 16](https://user-images.githubusercontent.com/24994818/84679499-fee79880-aef6-11ea-9d3e-0acd0bc7211e.png)
 
-Note that this accomplishes the exact same thing as going into the central repository and doing a fetch/fast-forward merge, except git push allows us to do everything from inside my git repository. We will see some other convenient features of this command later in the module.
+**Note that this accomplishes the exact same thing as going into the central repository and doing a fetch/fast-forward merge, except git push allows us to do everything from inside my git repository**. We will see some other convenient features of this command later in the module.
 
 # 	* [Update CSS Styles (Mary)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
@@ -483,7 +484,7 @@ $ git commit -a -m "Add CSS styles for 3rd level headings"
 
 # 	* [Clean up Before Publishing (Mary](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
-Before Mary considers pushing her updates to the central repository, she needs to make sure she has a clean history. This must be done by Mary, because it is near-impossible to change history after it has been made public.
+**Before Mary considers pushing her updates to the central repository, she needs to make sure she has a clean history**. This must be done by Mary, because it is near-impossible to change history after it has been made public.
 
 ```console
 Mon Jun 15 ~/iOS/RysGitTutorialMarysRepository 
@@ -509,7 +510,7 @@ The commits labeled 1 and 2 are the public commits that Mary would be rebasing. 
 
 So, to publish her rebased master branch to the central repository, Mary would have to merge with origin/master. This cannot be a fast-forward merge, and the resulting merge commit is likely to confuse her collaborators and disrupt their workflow.
 
-This brings us to the most important rule to remember while rebasing: Never, ever rebase commits that have been pushed to a shared repository
+**This brings us to the most important rule to remember while rebasing: Never, ever rebase commits that have been pushed to a shared **repository
 
 If you need to change a public commit, use the git revert command that we discussed in [Undoing Changes](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content). This creates a new commit with the required modifications instead of re-writing old snapshots.
 
@@ -566,7 +567,7 @@ This will output a verbose rejection message. It seems that Git won't let anyone
 
 # 	* [Pull in Changes (Mary)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
-Mary can solve this problem by pulling in the central changes before trying to push her CSS changes. First, she needs the most up-to-date version of the origin/master branch.
+**Mary can solve this problem by pulling in the central changes before trying to push her CSS changes**. First, she needs the most up-to-date version of the origin/master branch.
 
 ```console
 Tue Jun 16 ~/iOS/RysGitTutorialMarysRepository 
@@ -606,15 +607,15 @@ Date:   Mon Jun 15 11:07:51 2020 -0500
     Add CSS styles for 3rd level headings
 ```
 
-Since both of these output a commit, we can tell that Mary's history diverged. This should also be clear from the diagram below, which shows the updated origin/master branch.
+**Since both of these output a commit, we can tell that Mary's history diverged**. This should also be clear from the diagram below, which shows the updated origin/master branch.
 
 ![Screen Shot 2020-06-16 at 10 23 26](https://user-images.githubusercontent.com/24994818/84794080-71ba4780-afbb-11ea-9ac0-3942cb7ffdb5.png)
 
 Mary is now in the familiar position of having to pull in changes from another branch. She can either merge, which cannot be fast-forwarded, or she can rebase for a linear history.
 
-Typically, you will want to rebase your changes on top of those found in your central repository. This is equivalent of saying, "I want to add my changes to what everyone else has already done"
+**Typically, you will want to rebase your changes on top of those found in your central repository**. This is equivalent of saying, "I want to add my changes to what everyone else has already done"
 
-As previously discussed, rebasing also eliminates superfluous merge commits. For these reasons, Mary will opt for a rebase. 
+**As previously discussed, rebasing also eliminates superfluous merge commits**. For these reasons, Mary will opt for a rebase. 
 
 ```console
 $ git rebase origin/master
@@ -622,7 +623,7 @@ First, rewinding head to replay your work on top of it...
 Applying: Add CSS styles for headings and links
 ```
 
-After the rebase, Mary's master branch contains everything from the central repository, so she can do a fast-forward push to publish her changes.
+**After the rebase, Mary's master branch contains everything from the central repository, so she can do a fast-forward push to publish her changes**.
 
 ![Screen Shot 2020-06-16 at 10 30 09](https://user-images.githubusercontent.com/24994818/84794851-60256f80-afbc-11ea-9e21-d746eb4a81c9.png)
 
@@ -645,7 +646,7 @@ Tue Jun 16 ~/iOS/RysGitTutorialRepository
 $ git log origin/master..master --stat
 ```
 
-Of course, the second log command won't output anything, since we haven't added any new commits while Mary was adding her CSS edits. It is usually a good idea to check this before trying to merge in a remote branch. 
+Of course, the second log command won't output anything, since we haven't added any new commits while Mary was adding her CSS edits. **It is usually a good idea to check this before trying to merge in a remote branch**. 
 
 Otherwise, you might en up with some extra merge commits when you thought you were fast-forwarding your branch.
 
@@ -655,9 +656,11 @@ $ git merge origin/master
 Already up to date.
 ```
 
-Our repository is now synchronized with the central repository. Note that Mary may have moved on and added some new content that we don't know about, but it does not matter. The only changes we need to know about are those in central-repo.git. While this does not make a huge difference when we are working with just one another developer, imagine having to keep track of a dozen different developer's repositories in real-time. This kind of chaos is precisely the problem a centralized collaboration workflow is designed to solve:
+**Our repository is now synchronized with the central repository**. Note that Mary may have moved on and added some new content that we don't know about, but it does not matter. The only changes we need to know about are those in central-repo.git. **While this does not make a huge difference when we are working with just one another developer, imagine having to keep track of a dozen different developer's repositories in real-time**. 
 
 ![Screen Shot 2020-06-16 at 11 12 30](https://user-images.githubusercontent.com/24994818/84799714-4a1aad80-afc2-11ea-88c5-1bd0d56c7fd8.png)
+
+This kind of chaos is precisely the problem a centralized collaboration workflow is designed to solve:
 
 The presence of a central communication hub condenses all this development into a single repository and ensures that no one overwrites another's content, as we discovered while trying to push Mary's CSS updates.
 
@@ -672,12 +675,12 @@ Next up, we will configure a network-based repository using a service called Git
 #   * [Quick Reference](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 ```console
-$ git init --bare repositoryName
+$ git init --bare <repositoryName>
 ```
 Create a Git repository, but omit the working directory
 
 ```console
-$ git remote rm remoteName
+$ git remote rm <remoteName>
 ```
 Remove the specified remote from your book-marked connections.
 
