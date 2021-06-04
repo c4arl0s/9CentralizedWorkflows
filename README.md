@@ -1,21 +1,21 @@
 # [go back to Content](https://github.com/c4arl0s/RysGitTutorial#rys-git-tutorial)
 
 # [9 Centralized Workflows RysGit Tutorial - Content](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#go-back-to-content)
- * [Create a Bare Repository (Central)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-create-a-bare-repository-central)
- * [Update Remotes (Mary and You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-update-remotes-mary-and-you)
- * [Push the Master Branch](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-push-the-master-branch)
- * [Add News Update (You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-add-news-update-you)
- * [Publish the News Item (You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-publish-the-news-item-you)
- * [Update CSS Styles (Mary)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-update-css-styles-mary)
- * [Update another CSS Style](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-update-another-css-style)
- * [Clean up Before Publishing (Mary](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-clean-up-before-publishing-mary)
- * [Publish CSS Changes (Mary](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-publish-css-changes-mary)
- * [Pull in Changes (Mary)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-pull-in-changes-mary)
- * [Pull in Changes (you)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-pull-in-changes-you)
- * [Conclusion](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-conclusion)
- * [Quick Reference](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-quick-reference)
 
-
+1. [x] [1. Create a Bare Repository (Central)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-create-a-bare-repository-central)
+2. [x] [2. Update Remotes (Mary and You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-update-remotes-mary-and-you)
+3. [x] [3. Push the Master Branch](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-push-the-master-branch)
+4. [x] [4. Add News Update (You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-add-news-update-you)
+5. [x] [5. Publish the News Item (You)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-publish-the-news-item-you)
+6. [x] [6. Update CSS Styles (Mary)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-update-css-styles-mary)
+7. [x] [7. Update another CSS Style](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-update-another-css-style)
+8. [x] [8. Clean up Before Publishing (Mary](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-clean-up-before-publishing-mary)
+9. [x] [9. Publish CSS Changes (Mary](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-publish-css-changes-mary)
+10. [x] [10. Pull in Changes (Mary)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-pull-in-changes-mary)
+11. [x] [11. Pull in Changes (you)](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-pull-in-changes-you)
+12. [x] [12. Conclusion](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-conclusion)
+13. [x] [13. Quick Reference](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#-quick-reference)
+ 
 # [9 Centralized Workflows RysGit Tutorial](https://github.com/c4arl0s/9CentralizedWorkflowsRysGitTutorial#9-centralized-workflows-rysgit-tutorial---content)
 
 In the previous module, we shared information directly between two developers repositories: my git repository and mary's repository. This works for very small teams developing simple programs, but larger projects call for a more structured environment. **This module Introduces one such environment the centralized workflow**.
